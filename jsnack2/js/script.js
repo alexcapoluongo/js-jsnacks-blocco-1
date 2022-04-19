@@ -8,7 +8,6 @@ for (let i= 0; i < 6; i++) {
     // se è dispari inseriscilo nell'array.
     if (number % 2 === 1) {
         dispari.push(number);
-    } else {
     }
 } 
 console.log(dispari);
