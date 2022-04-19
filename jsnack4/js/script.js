@@ -2,19 +2,28 @@
 // e calcola la somma di tutte le cifre che compongono il numero.
 
 // Chiedi un numero di 4 cifre all'utente
-let userNumber = (prompt('inserisci un numero di 4 cifre'));
+let userNumber =prompt(`inserisci un numero di 4 cifre`);
 console.log(userNumber);
 
-let number1 = parseInt(userNumber[0]);
-let number2 = parseInt(userNumber[1]);
-let number3 = parseInt(userNumber[2]);
-let number4 = parseInt(userNumber[3]);
+if (userNumber.length !== 4 || isNan(userNumber)) {
+    alert('scrivi un numero di 4 cifre');
+} else {
+    somma = 0
+    for (let i = 0; i < 4; i++) {
+        //far leggere le 4 cifre
+        console.log(userNumber[i]);
+        // trasformare le 4 cifre in numeri
+        let number = parseInt(userNumber[i]);
+        // sommare le 4 cifre
+        somma = somma + number;
+    }
 
-let somma = number1 + number2 + number3 + number4;
+    console.log(somma);
 
-document.getElementById('numero-inserito').innerHTML = `Il numero che hai inserito è ${userNumber}`;
-document.getElementById('numero-sommato').innerHTML = `Le cifre del tuo numero sommate risultano ${somma}`;
+    //stampa
+    document.getElementById('numero-inserito').innerHTML = `Il numero che hai inserito è ${userNumber}`;
+    document.getElementById('numero-sommato').innerHTML = `Le cifre del tuo numero sommate risultano ${somma}`;
 
-
+}
 
 
